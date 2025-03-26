@@ -30,7 +30,7 @@ You can download the Postman Collection JSON here: https://ristek.link/AdvProgWe
 After you download the Postman Collection, you can try the endpoints inside "BambangShop Publisher" folder.
 This Postman collection also contains endpoints that you need to implement later on (the `Notification` feature).
 
-Postman is an installable client that you can use to test web endpoints using HTTP request.
+Postman is an installable client that you can use to test web endpoints using SHTTP request.
 You can also make automated functional testing scripts for REST API projects using this client.
 You can install Postman via this website: https://www.postman.com/downloads/
 
