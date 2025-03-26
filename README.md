@@ -88,5 +88,13 @@ Using a Vec would mean to go through each element manually to make sure it stays
 The Singleton pattern ensures there's only one instance of a structure with a global access point. However, it does not guarantee thread safety by itself. Even if we use a Singleton for our subscriber list, a container that safely handles concurrent operations is still needed. By utilizing DashMap, it comes in—it’s built to provide thread-safe, efficient concurrent access. Essentially, Singleton manages instance uniqueness while DashMap takes care of safe, high-performance multi-threaded access.
 
 #### Reflection Publisher-2
+1. In the Model-View Controller (MVC) compound pattern, there is no “Service” and “Repository”. Model in MVC covers both data storage and business logic. Explain based on your understanding of design principles, why we need to separate “Service” and “Repository” from a Model?
+“Service” and “Repository” must be separated to keep things organized. A separate Service layer handles the business rules and processes, avoiding any mix-up with raw data operations. This clear division leads to code that’s easier to maintain, test, and extend: the Model remains a representation of data, the Repository deals with persistence, and the Service carries out the core application logic.
+
+2. What happens if we only use the Model? Explain your imagination on how the interactions between each model (Program, Subscriber, Notification) affect the code complexity for each model?
+Using only the Model can lead to tangled dependencies and make the code harder to maintain or test, as changes in one Model may affect others. This is because  the Model handles data, business logic, and interactions all in one place, where it quickly becomes overloaded with responsibilities (i.e. managing creation, retrieval, updates, and communication between models (Program, Subscriber, Notification)). 
+
+3. Have you explored more about Postman? Tell us how this tool helps you to test your current work. You might want to also list which features in Postman you are interested in or feel like it is helpful to help your Group Project or any of your future software engineering projects.
+I've explored Postman since it's been used for assignments and such. Postman helps me to quickly test API endpoints, adjust environment variables to simulate different scenarios, etc.
 
 #### Reflection Publisher-3
