@@ -98,3 +98,11 @@ Using only the Model can lead to tangled dependencies and make the code harder t
 I've explored Postman since it's been used for assignments and such. Postman helps me to quickly test API endpoints, adjust environment variables to simulate different scenarios, etc.
 
 #### Reflection Publisher-3
+1. Observer Pattern has two variations: Push model (publisher pushes data to subscribers) and Pull model (subscribers pull data from publisher). In this tutorial case, which variation of Observer Pattern that we use?
+In this tutorial case, the push model of the Observer Pattern is fillowed. This is where the publisher immediately sends out updates to all subscribers as soon as new data is available, rather than waiting for subscribers to request the information.
+
+2. What are the advantages and disadvantages of using the other variation of Observer Pattern for this tutorial case? (example: if you answer Q1 with Push, then imagine if we used Pull)
+If the pull model is used instead of the push, subscribers would only fetch updates when needed. This can help avoid unnecessary data transfers and give them more control over what information they receive. However, doing so  can also complicate things, such as managing regular polling adds complexity, which might lead to delays in getting the most up-to-date information. Other than that, frequent polling could introduce extra overhead, making it less responsive than the push model used in this tutorial.
+
+3. Explain what will happen to the program if we decide to not use multi-threading in the notification process.
+Not using the multi-threading in the notification means the notification process would operate on a single thread. This means the notifications are handled one after the other. If any notification takes a while to send, it could block the program from moving on to the other tasks. This slows down the entire application and leads to performance bottlenecks when many notifications are queued.
